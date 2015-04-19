@@ -1,0 +1,12 @@
+module ApplicationHelper
+  def value_is_valid (value, type)
+    case type
+    when 'bit'
+      return (value =~/^\s*'(0|1|-)'\s*$/).present?
+    when 'bits' 
+      return (value =~/^\s*""(0|1|-)"{1,}\s*$/).present?
+    else
+      return (value =~/^\s*-?[0-9]{1,}\s*$/).present?
+    end
+  end
+end
