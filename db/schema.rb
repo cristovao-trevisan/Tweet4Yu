@@ -11,32 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140624183007) do
-
-  create_table "connections", force: true do |t|
-    t.integer "source_state_id"
-    t.integer "target_state_id"
-    t.string  "condition"
-  end
-
-  create_table "diagrams", force: true do |t|
-    t.integer  "user_id"
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "reset_state_id"
-  end
-
-  create_table "states", force: true do |t|
-    t.integer "diagram_id"
-    t.string  "name"
-    t.integer "x"
-    t.integer "y"
-    t.string  "outputs"
-  end
+ActiveRecord::Schema.define(version: 20140623181055) do
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
+    t.string   "name"
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -52,13 +31,5 @@ ActiveRecord::Schema.define(version: 20140624183007) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
-
-  create_table "variables", force: true do |t|
-    t.integer "diagram_id"
-    t.string  "name"
-    t.string  "variable_type"
-    t.string  "range"
-    t.string  "type"
-  end
 
 end

@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Twett4Yu::Application.load_tasks
+Tweet4Yu::Application.load_tasks
