@@ -1,1 +1,16 @@
-<h1> THIS IS THE MAIN PAGE</h1>
+<div class="row">
+	<h1> HOME </h1>
+</div>
+<div class="row">
+	<table class="table table-striped">
+		<col width="20px">
+		<tbody>
+			<%@posts.each do |post|%>
+				<tr> 
+					<td><p class="text-info"><%=post[0] + " says:"%></p></td>
+					<td><%=post[1]%></td>
+				</tr>
+			<%end%>
+		</tbody>
+	</table>
+</div>

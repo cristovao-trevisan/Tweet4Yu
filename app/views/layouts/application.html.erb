@@ -28,16 +28,17 @@
                   <i class="icon-home"></i> Home
                 <% end %>
               </li>
+              <li>
+                <%= link_to "Friends", friends_main_path %>
+              </li>
             
             </ul>
             
               
             <ul class="nav pull-right">
-              <% if controller_name !=:users %>
+              <% if current_user %>
               <li>
-                <%= link_to destroy_user_session_path, :method => :delete do %>
-                  <i class="icon-off"></i> Sair
-                <% end %>
+                <%= link_to "Sign Out" ,destroy_user_session_path, :method => :delete %>
               </li>
               <% end %>
             </ul>

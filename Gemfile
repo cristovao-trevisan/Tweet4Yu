@@ -17,7 +17,8 @@ gem 'thin'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'twitter-bootstrap-rails'
+  gem "less-rails"
+  gem 'twitter-bootstrap-rails', '2.2.8'
   gem 'jquery-rails'
   gem 'sass-rails'
 end

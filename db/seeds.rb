@@ -11,3 +11,12 @@ user = User.create(
   :password => '12345678', 
   :password_confirmation => '12345678', 
 )
+
+user2 = User.create( 
+  :email => 'teste2@teste.com',
+  :name => 'teste2',
+  :password => '12345678', 
+  :password_confirmation => '12345678', 
+)
+
+Follow.create(:user_id => 1, :friend_id => 2)

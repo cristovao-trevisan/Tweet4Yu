@@ -4,7 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  # Setup accessible (or protected) attributes for your model
-  # attr_accessible :title, :body
-  has_many :diagrams, dependent: :destroy
+  validates :name, presence: true, uniqueness: true
+  has_many :posts, dependent: :destroy
+  has_many :follows, dependent: :destroy
+  has_many :friends, through: :follows
 end

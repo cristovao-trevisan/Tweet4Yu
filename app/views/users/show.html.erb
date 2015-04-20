@@ -1,0 +1,17 @@
+<div class="row">
+	<h1><%=@user.name%></h1>
+</div>
+
+<div class="row">
+	<table class="table table-striped">
+		<col width="20px">
+		<tbody>
+			<%@user.posts.each do |post|%>
+				<tr> 
+					<td><%=post.text%></td>
+				</tr>
+			<%end%>
+		</tbody>
+	</table>
+</div>
+

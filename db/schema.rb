@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140623181055) do
+ActiveRecord::Schema.define(version: 20150420020647) do
+
+  create_table "follows", force: true do |t|
+    t.integer "user_id"
+    t.integer "friend_id"
+  end
+
+  create_table "posts", force: true do |t|
+    t.integer "user_id"
+    t.string  "text"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
