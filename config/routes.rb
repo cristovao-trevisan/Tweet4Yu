@@ -6,6 +6,8 @@ Tweet4Yu::Application.routes.draw do
   
   resources :users, only: [:show]
   
+  resources :follows, only: [:create]
+  
   root :to => 'main#index'
   
 end

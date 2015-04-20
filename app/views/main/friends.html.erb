@@ -2,6 +2,12 @@
 	<h1> My Friends </h1>
 </div>
 <div class="row">
+	<%= form_tag('/follows/') do |f|%>
+		<%= text_field_tag  'friend_name' %>
+  		<%= submit_tag 'Add Friend' %>
+	<% end -%>
+</div>
+<div class="row">
 	<table class="table table-striped">
 		<col width="20px">
 		<tbody>

@@ -7,7 +7,7 @@
 		<tbody>
 			<%@posts.each do |post|%>
 				<tr> 
-					<td><p class="text-info"><%=post[0] + " says:"%></p></td>
+					<td><%= link_to post[0].name + " says:", user_path(post[0])%></td>
 					<td><%=post[1]%></td>
 				</tr>
 			<%end%>

@@ -5,12 +5,13 @@ class MainController < ApplicationController
     @posts = []
     @friends.each do |friend|
       if friend.posts.first
-        @posts.push([friend.name, friend.posts.first.text])
+        @posts.push([friend, friend.posts.first.text])
       end
     end
   end
   
   def friends
+    @friend = Follow.new(user: current_user)
     @friends = current_user.friends
   end
 end
