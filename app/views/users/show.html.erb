@@ -3,15 +3,18 @@
 </div>
 
 <div class="row">
-	<table class="table table-striped">
-		<col width="20px">
-		<tbody>
-			<%@user.posts.each do |post|%>
-				<tr> 
-					<td><%=post.text%></td>
-				</tr>
-			<%end%>
-		</tbody>
-	</table>
+	<%@user.posts.each do |post|%>
+		<p class="post_box"><%=post.text%></td>
+	<%end%>
 </div>
 
+<style type="text/css">
+	.post_box {
+		text-align: center;
+	    border-radius: 25px;
+	    border: 2px solid #8AC007;
+	    background: #CCFFCC;
+	    padding: 20px;
+	    width: 400px;
+	}
+</style>

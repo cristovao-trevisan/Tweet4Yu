@@ -1,6 +1,7 @@
 class MainController < ApplicationController
   before_filter :authenticate_user!
   def index
+    @user = current_user
     @friends = current_user.friends
     @posts = []
     @friends.each do |friend|
