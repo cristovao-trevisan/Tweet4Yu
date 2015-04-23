@@ -2,6 +2,9 @@
 
 This is a tutorial for Ubuntu
 
+In the project folder:
+
+
 First, install RVM:
 
 <code>
@@ -20,4 +23,10 @@ Second, install Bundler:
 
 <code>
 	sudo apt-get install bundler
+</code>
+
+Third, install gems:
+
+<code>
+	bundle install
 </code>

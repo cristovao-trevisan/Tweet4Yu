@@ -17,8 +17,6 @@ First, install RVM:
 	rvm use ruby-2.1.2@tweet4yu
 </code>
 
-<>
-
 Second, install Bundler:
 
 <code>
